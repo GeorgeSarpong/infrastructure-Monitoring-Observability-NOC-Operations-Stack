@@ -1,0 +1,60 @@
+# Alert Triage Procedure — NOC Operations
+
+**Document Type:** NOC Runbook
+**Author:** George Amankwaa Sarpong
+**Last Updated:** June 2026
+
+---
+
+## Purpose
+Standardised procedure for triaging incoming alerts in a 24/7 NOC environment ensuring consistent, efficient, and well-documented incident response.
+
+---
+
+## Alert Priority Matrix
+
+| Priority | Response Time | Escalation Time | Examples |
+|---|---|---|---|
+| P1 — Critical | Immediate | 5 minutes | Complete outage, data loss risk |
+| P2 — High | 15 minutes | 30 minutes | Significant degradation |
+| P3 — Medium | 30 minutes | 2 hours | Partial impact, warnings |
+| P4 — Low | 4 hours | Next business day | Informational alerts |
+
+---
+
+## Triage Steps
+
+### 1. Alert Receipt
+- Acknowledge alert immediately in monitoring platform
+- Note exact timestamp of alert
+- Create incident ticket — include alert name, affected system, severity
+
+### 2. Validation
+- Confirm alert is not a false positive
+- Check if related alerts are firing simultaneously
+- Review last 30 minutes of metrics for context
+- Check change management log for recent changes
+
+### 3. Impact Assessment
+- Identify affected systems and services
+- Determine number of users or systems impacted
+- Assess business criticality of affected service
+- Determine if SLA breach is imminent
+
+### 4. Response
+- Apply known fix from runbook if available
+- If no runbook exists — escalate immediately
+- Document every action with timestamp in ticket
+- Update stakeholders per communication matrix
+
+### 5. Resolution
+- Verify fix resolves the alert
+- Monitor for 15 minutes post-fix
+- Close alert in monitoring platform
+- Update incident ticket with resolution details
+
+### 6. Post-Incident
+- Complete post-incident review within 24 hours
+- Document root cause
+- Update runbook with lessons learned
+- Raise problem ticket if recurring issue
